@@ -18,7 +18,8 @@ logger.cfg({consoleLevel: 'debug',fileLevel: 'error'});
 // Import Database Connection here
 import {default as Database} from  "../src/server/data/db";
 
-const port = 4751;
+
+
 const app = express();
 
 app.use(compression());
@@ -59,8 +60,9 @@ app.use(function (err, req, res, next) {
   logger.log(err ,'error');
 });
 
-
-app.listen(port, function(err) {
+app.set('port',(process.env.Port || 4000))
+app.listen(app.get('port'), function(err) {
+  logger.log(`api started on port ${app.get('port')}` ,'info');
   if (err) {
     logger.log(err);
   }

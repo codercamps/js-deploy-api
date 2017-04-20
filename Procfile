@@ -1,1 +1,1 @@
-web: babel-node buildScripts/apiServer.js
+web: npm start
