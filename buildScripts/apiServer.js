@@ -60,7 +60,7 @@ app.use(function (err, req, res, next) {
   logger.log(err ,'error');
 });
 
-app.set('port',(process.env.Port || 4000))
+app.set('port',(process.env.Port || 8080))
 app.listen(app.get('port'), function(err) {
   logger.log(`api started on port ${app.get('port')}` ,'info');
   if (err) {
