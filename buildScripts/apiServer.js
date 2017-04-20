@@ -21,7 +21,7 @@ import {default as Database} from  "../src/server/data/db";
 
 
 const app = express();
-
+app.use('/favicon.ico', express.static('./src/server/public/favicon.ico'));
 app.use(compression());
 app.use(cors());
 
