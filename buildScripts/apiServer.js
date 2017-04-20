@@ -25,7 +25,10 @@ app.use('/favicon.ico', express.static('./src/server/public/favicon.ico'));
 app.use(compression());
 app.use(cors());
 
-//Add sample data here
+
+process.env.NODE_ENV = 'production';
+
+/** Database Connections go Here */
 Database.connect().then(() => {
 logger.log("Database is connected")
 }).
@@ -33,10 +36,6 @@ catch((error)=>{
   logger.log(error, 'error')
 });
 
-process.env.NODE_ENV = 'production';
-
-/** Database Connections go Here */
-mongoose.connect("mongodb://localhost/MovieApp");
 
 app.use(bodyParser.urlencoded({
   extended: true
