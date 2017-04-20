@@ -1,0 +1,6 @@
+{
+  "name": "Movie Application API",
+  "description": "Restful CRUD API for Movie Information Center.",
+  "repository": "https://github.com/codercamps/js-deploy-api",
+  "keywords": ["movie","HTML5","API"]
+}
