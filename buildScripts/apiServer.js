@@ -33,6 +33,7 @@ catch((error)=>{
   logger.log(error, 'error')
 });
 
+process.env.NODE_ENV = 'production';
 
 /** Database Connections go Here */
 mongoose.connect("mongodb://localhost/MovieApp");
