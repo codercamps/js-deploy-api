@@ -48,7 +48,7 @@ app.use(logger.dev);
 
 /** Mount Api's Here */
 app.use('/admin', (req, res) => {
-  res.send('Api Server is loaded');
+  res.send('Api Server is loaded for admin');
 });
  /** Mount Routes Here */
 
@@ -60,10 +60,12 @@ app.use(function (err, req, res, next) {
   logger.log(err ,'error');
 });
 
-app.set('port',(process.env.Port || 8080))
-app.listen(app.get('port'), function(err) {
+app.get('/', function(request, response) {
+    var result = 'App is running'
+    response.send(result);
+}).listen(process.env.PORT || 5000), function(err) {
   logger.log(`api started on port ${app.get('port')}` ,'info');
   if (err) {
     logger.log(err);
   }
-});
+};
