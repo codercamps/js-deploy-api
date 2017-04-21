@@ -59,13 +59,13 @@ app.use('/movies', moviesRoute);
 app.use(function (err, req, res, next) {
   logger.log(err ,'error');
 });
-
+let port = (process.env.PORT || 5000);
 app.get('/', function(request, response) {
     var result = 'App is running'
     response.send(result);
-}).listen(process.env.PORT || 5000), function(err) {
-  logger.log(`api started on port ${app.get('port')}` ,'info');
+}).listen(port, function(err) {
+  logger.log(`api started on port ${port}` ,'info');
   if (err) {
     logger.log(err);
   }
-};
+});
