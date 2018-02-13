@@ -32,7 +32,7 @@
     "cross-env": "3.1.3",
     "css-loader": "^0.25.0",
     "del": "^2.2.1",
-    "ejs": "~2.4.1",
+    "ejs": "^2.5.5",
     "eslint": "3.8.1",
     "eslint-plugin-import": "2.0.1",
     "eslint-watch": "2.1.14",
@@ -46,10 +46,10 @@
     "less": "^2.7.2",
     "less-loader": "^4.0.2",
     "mocha": "^3.2.0",
-    "mongodb": "^2.2.25",
-    "morgan": "~1.7.0",
     "moment": "^2.18.1",
+    "mongodb": "^2.2.25",
     "mongoose": "^4.9.4",
+    "morgan": "~1.7.0",
     "nock": "8.1.0",
     "npm-run-all": "3.1.1",
     "nsp": "2.6.2",
@@ -65,5 +65,4 @@
     "webpack-md5-hash": "0.0.5",
     "winston": "^2.3.1"
   }
-
 }
